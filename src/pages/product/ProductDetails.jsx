@@ -9,12 +9,13 @@ function ProductDetails() {
   
   const {productid} = useParams()
   const [singleData, setSingleData]= useState([])
-  console.log(`${productUrl}/products/${productid}`);
   
   useEffect(()=>{
     
-    axios.get(`${productUrl}/${productid}`).then((res)=>{
+    axios.get(`${productUrl}/products/${productid}`).then((res)=>{
       setSingleData(res.data)
+      console.log(res.data);
+      
     }).catch((err)=>{
       console.log(err);
       

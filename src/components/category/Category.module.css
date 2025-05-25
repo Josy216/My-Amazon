@@ -24,16 +24,33 @@
 }
 .cont{
     position: relative;
+    width: 95%;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(4, minmax(200px , 1fr));
     place-items: center;
-    margin: 0 100px;
+    margin: 0 auto;
     margin-top: -10%;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 860px) {
     .cont {
         grid-template-columns: repeat(2, minmax(200px , 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .cont {
+        grid-template-columns: repeat(1, minmax(200px , 1fr));
+    }
+    .category img{
+        max-height: 78%;
+        padding:  0 15px;
+    }
+    .category{
+    height: 350px;
+        
     }
 }

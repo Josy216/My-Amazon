@@ -50,6 +50,7 @@ const decreament = (id)=>{
                 products={item}
                 renderDesc={true}
                 flex={true}
+                cartclass={true}
                 />
                 <div className={styles.btncont}>
                   <button onClick={()=>increament(item)}><IoIosArrowUp size={30}/></button>

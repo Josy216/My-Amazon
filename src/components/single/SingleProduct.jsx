@@ -7,7 +7,7 @@ import {DataContext} from '../../components/DataProvider/DataProvider'
 import {Type} from '../../utils/Utility' 
 // import { product } from '../category/data'
 
-function SingleProduct({products,  flex,renderDesc, renderAdd}) {
+function SingleProduct({products,  flex,renderDesc, renderAdd, cartclass}) {
   const {image,id, title,description, rating, price }= products;
   
   const [state, dispatch]= useContext(DataContext)
@@ -20,7 +20,7 @@ function SingleProduct({products,  flex,renderDesc, renderAdd}) {
     })
   }
   return (
-    <div className={`${classes.cont} ${flex?classes.flexed:''}`} >
+    <div className={`${cartclass?classes.cartclass:classes.cont} ${flex?classes.flexed:''}`} >
       <Link to={`/${id}`}>
         <img src={image} alt="" />
       </Link>
@@ -31,7 +31,7 @@ function SingleProduct({products,  flex,renderDesc, renderAdd}) {
             <Rating value={rating?.rate} precision={0.1}/>
             <small>{rating?.count}</small>
         </div>
-        <div>
+        <div className={classes.price}>
             <Currency  amount={price}/>
         </div>
         {renderAdd&&
