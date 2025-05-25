@@ -25,7 +25,7 @@ function ProductDetails() {
 
   return (
     <Layout>
-      <SingleProduct products={singleData} flex={true} renderDesc={true} renderAdd={true}/>
+      <SingleProduct products={singleData} flex={true} cartclass={true} renderDesc={true} renderAdd={true}/>
     </Layout>
   )
 }
