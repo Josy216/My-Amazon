@@ -1,0 +1,77 @@
+.cont{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.cards{
+    padding: 20px;
+}
+.cards h2, 
+.cards h3{
+    padding: 10px;
+}
+.cards hr{
+    margin: 10px;
+}
+.cont img{
+    width: 100px !important; 
+}
+.cont div:not(.subtotal){
+    height: auto !important;
+}
+
+
+.cartProduct{
+    display: flex;
+    gap: 10px;
+}
+.btncont{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 5px;
+}
+.cartProduct button{
+    padding: 5px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    
+}
+
+
+
+
+
+.subtotal{
+    padding: 20px;
+    min-width: 300px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(193, 193, 193);
+    background-color: rgb(242, 242, 242);
+}
+.subtotal a{
+    text-align: center;
+    width: 100%;
+    border: none;
+    background-color: #febd69;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+}
+.subtotal a:hover{
+    background-color: #d49644;
+}
+.subtotal > div,
+.subtotal span{
+    display: flex;
+    gap: 20px;
+}

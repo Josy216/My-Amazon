@@ -1,0 +1,39 @@
+.category{
+    height: 250px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.category a{
+    text-decoration: none;
+    color: rgb(35, 35, 35);
+}
+.category img{
+    width: 100%;
+    object-fit: contain;
+    max-height: 65%;
+    padding: 0 10px;
+}
+.category h2, .category p{
+    text-align: center;
+}
+.category p{
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(9, 132, 209);
+}
+.cont{
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, minmax(200px , 1fr));
+    place-items: center;
+    margin: 0 100px;
+    margin-top: -10%;
+}
+
+@media (max-width: 950px) {
+    .cont {
+        grid-template-columns: repeat(2, minmax(200px , 1fr));
+    }
+}
