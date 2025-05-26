@@ -21,7 +21,9 @@
 .cont div:not(.subtotal){
     height: auto !important;
 }
-
+.btncont button:hover{
+  color: #febd69;
+}
 
 .cartProduct{
     display: flex;
