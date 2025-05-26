@@ -1,6 +1,5 @@
 .cont{
     display: flex;
-    order: 2;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
@@ -78,9 +77,8 @@ gap: 5px;
     display: flex;
     gap: 20px;
 }
-@media (width:960px) {
-    .subtotal{
+@media (max-width:800px) {
+    .cont{
         display: block;
-        padding: 5px;
     }
 }
