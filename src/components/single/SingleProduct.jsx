@@ -10,7 +10,7 @@ import {Type} from '../../utils/Utility'
 function SingleProduct({products,  flex,renderDesc, renderAdd, cartclass}) {
   const {image,id, title,description, rating, price }= products;
   
-  const [state, dispatch]= useContext(DataContext)
+  const [_, dispatch]= useContext(DataContext)
   const addToCart = ()=>{
     dispatch({
       type:Type.AddToBasket,
@@ -20,6 +20,7 @@ function SingleProduct({products,  flex,renderDesc, renderAdd, cartclass}) {
     })
   }
   return (
+    // classes.cartclass? cartclass: 
     <div className={`${cartclass?classes.cartclass:classes.cont} ${flex?classes.flexed:''}`} >
       <Link to={`/${id}`}>
         <img src={image} alt="" />

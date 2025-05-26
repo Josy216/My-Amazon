@@ -24,7 +24,7 @@ function Product() {
     <div className={classes.product}>
       {
         product.map((singleData, index)=>{
-            return <SingleProduct renderAdd={true}  products={singleData} key={index}/>
+            return <SingleProduct cartclass={false} renderAdd={true}  products={singleData} key={index}/>
         })
       }
     </div>

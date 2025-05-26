@@ -14,7 +14,6 @@ function ProductDetails() {
     
     axios.get(`${productUrl}/products/${productid}`).then((res)=>{
       setSingleData(res.data)
-      console.log(res.data);
       
     }).catch((err)=>{
       console.log(err);
