@@ -7,8 +7,6 @@ import { initialState, reducer } from './utils/Reducer.jsx'
 
 createRoot(document.getElementById('root')).render(
     <DataProvider reducer={reducer} initialState={initialState}>
-
-
         <App />
     </DataProvider>
 )

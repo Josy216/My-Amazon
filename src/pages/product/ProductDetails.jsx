@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../../components/layout/Layout'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import productUrl from '../../Api/Api'
 import SingleProduct from '../../components/single/SingleProduct'
@@ -24,7 +24,16 @@ function ProductDetails() {
 
   return (
     <Layout>
-      <SingleProduct products={singleData} flex={true} cartclass={true} renderDesc={true} renderAdd={true}/>
+      {singleData && Object.keys(singleData).length > 0 && (
+        <SingleProduct 
+          products={singleData} 
+          renderDesc={true} 
+          renderAdd={true} 
+          flex={true} 
+          cartclass={true} 
+        />
+      ) 
+      }  
     </Layout>
   )
 }

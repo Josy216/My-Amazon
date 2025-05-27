@@ -41,7 +41,11 @@ const decreament = (id)=>{
           <h3>Your Shoping Basket</h3>
           <hr />
           {
-            basket?.length==0?(<p>oops! no item added</p>):
+            basket?.length==0?(<div className={styles.noItem}>
+              <h2>Your Amazon Cart is empty</h2>
+              <Link to={'/'}><button>Shop now</button></Link>
+              <Link to={'/Signup'}><button>Sign up now</button></Link>
+            </div>):
             (
               basket?.map((item, index)=>{
                 return <section className={styles.cartProduct}>
