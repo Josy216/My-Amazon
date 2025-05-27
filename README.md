@@ -1,4 +1,6 @@
 # 🛒 Amazon Clone — React
+  
+  🔗 [Live demo](https://josy216.github.io/My-Amazon/)  
 
 A **fully responsive** Amazon-style e-commerce frontend built with modern tools and a clean, intuitive UI. This project showcases my ability to create a pixel-perfect, user-friendly interface inspired by a real-world e-commerce platform using React.
 
