@@ -5,8 +5,7 @@ import { Type } from './utils/Utility'
 import { auth } from './utils/Firebase'
 function App() {
 
-  const [{user}, dispatch] = useContext(DataContext)
-  console.log(user)
+  const [{_}, dispatch] = useContext(DataContext)
   useEffect(()=>{
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
