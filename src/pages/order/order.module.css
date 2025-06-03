@@ -1,0 +1,28 @@
+.order{
+    background: #efeeee;
+    padding: 30px;
+}
+.order__container{
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.order__container h2{
+    padding: 20px;
+    border-bottom: 1px solid febd69;
+}
+.order__container p{
+    padding: 12px;
+
+}
+.order__container img{
+    width: 100px !important;
+}
+.order__container div{
+    height: auto !important;
+}
+.empty{
+    color: yellow;
+    padding: 20px;
+    font-size: 24px;
+}

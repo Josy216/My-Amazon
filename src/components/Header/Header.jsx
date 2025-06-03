@@ -7,9 +7,10 @@ import { Link } from 'react-router-dom';
 import cartIcon from './cart.png'
 import { useContext } from 'react';
 import { DataContext } from '../DataProvider/DataProvider';
+import  {auth} from '../../utils/Firebase';
 function Header() {
 
-const [{basket}]= useContext(DataContext)
+const [{user, basket}]= useContext(DataContext)
 const totalItem = basket?.reduce((amount, item)=>{
   return item.amount + amount
 }, 0)
@@ -75,9 +76,25 @@ const totalItem = basket?.reduce((amount, item)=>{
             </Link>
 
             {/* three components */}
-            <Link to="/signup" className={styles.account}>
-              <p className={styles.label}>Hello, sign in</p>
-              <span className={styles.bold}>Account & Lists</span>
+            <Link to={!user && "/signup"} className={styles.account}>
+            <div>
+              
+            {
+              user?(
+                <>
+                <p className={styles.label}>Hello, {user?.email?.split("@")[0]}</p>
+                <span onClick={()=>auth.signOut()}>Sign Out</span>
+                </>
+
+              ):(
+                <>
+                <p className={styles.label}>Hello, sign in</p>
+                <span className={styles.bold}>Account & Lists</span>
+
+                </>
+              )
+            }
+            </div>
             </Link>
 
             {/* orders */}

@@ -31,6 +31,5 @@ function App() {
     </div>
   )
 }
-
 export default App
 //fakestoreapi.com/product/

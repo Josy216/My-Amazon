@@ -1,10 +1,8 @@
-// import { useReducer } from "react"
 
-import { act } from 'react'
 import {Type} from './Utility'
-import { amber } from '@mui/material/colors'
 export const initialState = {
-    basket: []
+    basket: [],
+    user: null
 }
 export const reducer = (state, action)=>{
     switch(action.type){
@@ -40,6 +38,16 @@ export const reducer = (state, action)=>{
                     ...state,
                     basket: newBasket
                 }
+        case Type.EmpityBasket:
+                return {
+                    ...state,
+                    basket: []
+                }
+                case Type.SetUser:
+                    return {
+                        ...state,
+                        user : action.user
+                    }
             default: 
             return state;
     }

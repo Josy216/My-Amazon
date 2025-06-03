@@ -1,4 +1,6 @@
 export const Type={
     AddToBasket : 'AddToBasket',
-    RemoveFromBasket:'RemoveFromBasket'
+    RemoveFromBasket:'RemoveFromBasket',
+    SetUser:'SetUser',
+    EmpityBasket:'emptyBasket'
 }
