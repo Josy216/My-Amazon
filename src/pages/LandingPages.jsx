@@ -1,8 +1,8 @@
-import React from 'react'
-import Layout from '../components/layout/Layout'
-import CarouselEffect from '../components/Courosel/img/CarouselEffect'
-import Category from '../components/category/Category'
-import Product from '../components/single/product'
+
+import Layout from '../components/layout/Layout.jsx'
+import CarouselEffect from '../components/Courosel/img/CarouselEffect.jsx'
+import Category from '../components/category/Category.jsx'
+import Product from '../components/single/Product.jsx'
 
 function LandingPages() {
   return (
